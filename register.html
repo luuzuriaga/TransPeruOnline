@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registro TransPerú</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="box box-home">
+
+    <h2><i class="fa-solid fa-user-plus"></i> Registro de Usuario</h2>
+
+    <div class="line"></div>
+
+    <form action="register.php" method="POST">
+
+        <!-- NOMBRES -->
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="nombres" placeholder="Nombres" required>
+        </div>
+
+        <!-- APELLIDOS -->
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+        </div>
+
+        <!-- DNI -->
+        <div class="input-box">
+            <i class="fa-solid fa-id-card"></i>
+            <input type="text" name="dni" placeholder="DNI" required>
+        </div>
+
+        <!-- CELULAR -->
+        <div class="input-box">
+            <i class="fa-solid fa-phone"></i>
+            <input type="text" name="celular" placeholder="Celular" required>
+        </div>
+
+        <!-- USUARIO -->
+        <div class="input-box">
+            <i class="fa-solid fa-circle-user"></i>
+            <input type="text" name="usuario" placeholder="Usuario" required>
+        </div>
+
+        <!-- CONTRASEÑA -->
+        <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="pass1" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <!-- CONFIRMAR CONTRASEÑA -->
+        <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="pass2" placeholder="Confirmar contraseña" required>
+        </div>
+
+        <!-- MENSAJE ERROR -->
+        <div id="msg"></div>
+
+        <!-- LINEA -->
+        <div class="line"></div>
+
+        <!-- BOTONES -->
+        <div class="buttons">
+
+            <button type="submit" class="login" onclick="return validar()">
+                <i class="fa-solid fa-floppy-disk"></i> Guardar
+            </button>
+
+            <button type="button" class="register" onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-right-to-bracket"></i> Volver al Login
+            </button>
+
+        </div>
+
+        <!-- LINEA -->
+        <div class="line"></div>
+
+        <!-- REDES -->
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+    </form>
+
+</div>
+
+<!-- JS VALIDACIÓN -->
+<script>
+function validar(){
+    let p1 = document.getElementById("pass1").value;
+    let p2 = document.getElementById("pass2").value;
+    let msg = document.getElementById("msg");
+
+    if(p1 !== p2){
+        msg.className = "msg-box msg-error";
+        msg.innerHTML = "❌ Las contraseñas no coinciden";
+        return false;
+    }
+
+    msg.className = "";
+    msg.innerHTML = "";
+    return true;
+}
+</script>
+
+</body>
+</html>

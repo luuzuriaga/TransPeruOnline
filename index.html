@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login TransPerú</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="box box-home">
+
+    <h2><i class="fa-solid fa-bus"></i> TransPerú Online</h2>
+
+    <div class="line"></div>
+
+    <div id="msg"></div>
+
+    <form action="login_usu.php" method="POST">
+
+        <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="usuario" placeholder="Usuario" required>
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <div class="check-box">
+            <input type="checkbox" onclick="togglePassword()"> Mostrar contraseña
+        </div>
+
+        <div class="buttons">
+
+            <button type="submit" class="login">
+                <i class="fa-solid fa-right-to-bracket"></i> Ingresar
+            </button>
+
+            <button type="button" class="register"
+                onclick="window.location.href='register.html'">
+                <i class="fa-solid fa-user-plus"></i> Registrarte
+            </button>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+    </form>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const error = params.get("error");
+
+if (error == "1") {
+    document.getElementById("msg").innerHTML = "ERROR: Contraseña o usuario incorrecta";
+    document.getElementById("msg").style.color = "red";
+}
+</script>
+
+<script>
+function togglePassword() {
+    let pass = document.getElementById("password");
+    pass.type = pass.type === "password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
