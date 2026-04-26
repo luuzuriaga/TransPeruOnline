@@ -1,7 +1,5 @@
 # 🚍 TransPerú Online — Sistema de Gestión de Pasajes
 
-![TransPerú Online Logo](./transperu_logo.png)
-
 > **Plataforma web para la reserva y gestión de viajes interprovinciales de manera rápida, segura y eficiente.**
 
 TransPerú Online es una solución integral para empresas de transporte que buscan digitalizar su proceso de venta de pasajes. Permite a los usuarios registrarse, autenticarse y buscar rutas disponibles en tiempo real.
