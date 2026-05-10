@@ -8,11 +8,13 @@ TransPerú Online es una solución integral para empresas de transporte que busc
 
 ## ✨ Características Principales
 
+- **💎 Diseño Premium:** Estética moderna, profesional y orientada al lujo para una mejor experiencia de usuario.
 - **🔐 Autenticación de Usuarios:** Sistema completo de registro e inicio de sesión con validación de credenciales.
-- **🔍 Búsqueda Inteligente:** Buscador de pasajes por origen, destino y fecha.
-- **📱 Interfaz Responsiva:** Diseño moderno y adaptable a dispositivos móviles y escritorio utilizando CSS3.
+- **🔍 Búsqueda Inteligente:** Buscador de pasajes por origen, destino y fecha integrado desde la Landing Page.
+- **🛣️ Secciones Dedicadas:** Páginas específicas para explorar Rutas, consultar Horarios y adquirir Pasajes.
+- **📱 Interfaz Responsiva:** Diseño adaptable a dispositivos móviles y escritorio utilizando CSS3 y Flexbox/Grid.
 - **📂 Gestión de Base de Datos:** Estructura optimizada en MySQL para el manejo de usuarios y registros.
-- **🎨 Icons & UX:** Uso de FontAwesome 6 para una experiencia visual intuitiva.
+- **🎨 Icons & UX:** Uso de FontAwesome 6 para una navegación visual e intuitiva.
 
 ---
 
@@ -59,10 +61,14 @@ Abre tu navegador y dirígete a:
 
 ```bash
 TransPeruOnline/
-├── index.html       # Página de Login
+├── index.html       # Landing Page y Búsqueda principal
+├── login.html       # Página de Iniciar Sesión
 ├── register.html    # Página de Registro
-├── home.html        # Dashboard / Búsqueda de pasajes
-├── style.css        # Estilos generales
+├── rutas.html       # Página de Rutas y Destinos
+├── horarios.html    # Página de Horarios de Salida
+├── pasajes.html     # Página de Búsqueda y Compra de Pasajes
+├── home.html        # Dashboard de usuario
+├── style.css        # Estilos generales (Diseño Moderno/Premium)
 ├── config.php       # Configuración de conexión DB
 ├── db.sql           # Script de la base de datos
 ├── login_usu.php    # Lógica de autenticación
