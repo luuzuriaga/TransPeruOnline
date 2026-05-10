@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Pasajes - TransPerú Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-bus"></i> TransPerú</div>
+    <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="rutas.html">Rutas</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="pasajes.html" class="active">Pasajes</a></li>
+    </ul>
+    <div class="nav-buttons">
+        <a href="login.html" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a>
+        <a href="register.html" class="btn btn-register"><i class="fa-solid fa-user-plus"></i> Regístrate</a>
+    </div>
+</nav>
+
+<section class="page-section">
+    <div class="section-header">
+        <h2>Búsqueda de Pasajes</h2>
+        <p>Selecciona tu viaje y asegura tu asiento rápidamente.</p>
+    </div>
+    
+    <!-- Mini buscador para cambiar ruta -->
+    <div class="mini-search">
+        <form action="" class="search-form mini-form">
+            <div class="input-group">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Origen" value="Lima">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Destino" value="Cusco">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="date" value="2026-06-01">
+            </div>
+            <button type="button" class="btn-search"><i class="fa-solid fa-rotate-right"></i> Modificar Búsqueda</button>
+        </form>
+    </div>
+
+    <!-- Resultados Simulados -->
+    <div class="ticket-results">
+        <h3>Resultados: Lima <i class="fa-solid fa-arrow-right"></i> Cusco</h3>
+        
+        <div class="ticket-card">
+            <div class="ticket-time">
+                <div class="time-box">
+                    <span class="t-title">Salida</span>
+                    <span class="t-hour">14:00</span>
+                    <span class="t-date">01 Jun</span>
+                </div>
+                <div class="duration">
+                    <i class="fa-solid fa-clock"></i> 20h 00m
+                </div>
+                <div class="time-box">
+                    <span class="t-title">Llegada</span>
+                    <span class="t-hour">10:00</span>
+                    <span class="t-date">02 Jun</span>
+                </div>
+            </div>
+            <div class="ticket-service">
+                <span class="service-type">Bus Cama 160°</span>
+                <ul>
+                    <li><i class="fa-solid fa-wifi"></i> WiFi a bordo</li>
+                    <li><i class="fa-solid fa-tv"></i> Pantallas Individuales</li>
+                    <li><i class="fa-solid fa-snowflake"></i> Aire Acondicionado</li>
+                </ul>
+            </div>
+            <div class="ticket-price">
+                <span class="price">S/ 120.00</span>
+                <span class="seats-left">15 Asientos disponibles</span>
+                <button class="btn-buy" onclick="alert('Esta es una vista previa. La funcionalidad de asientos está en desarrollo.')">Seleccionar Asiento</button>
+            </div>
+        </div>
+        
+        <div class="ticket-card">
+            <div class="ticket-time">
+                <div class="time-box">
+                    <span class="t-title">Salida</span>
+                    <span class="t-hour">18:00</span>
+                    <span class="t-date">01 Jun</span>
+                </div>
+                <div class="duration">
+                    <i class="fa-solid fa-clock"></i> 19h 30m
+                </div>
+                <div class="time-box">
+                    <span class="t-title">Llegada</span>
+                    <span class="t-hour">13:30</span>
+                    <span class="t-date">02 Jun</span>
+                </div>
+            </div>
+            <div class="ticket-service">
+                <span class="service-type">Bus VIP 180°</span>
+                <ul>
+                    <li><i class="fa-solid fa-wifi"></i> WiFi a bordo</li>
+                    <li><i class="fa-solid fa-utensils"></i> Cena incluida</li>
+                    <li><i class="fa-solid fa-bed"></i> Asiento Cama 180°</li>
+                </ul>
+            </div>
+            <div class="ticket-price">
+                <span class="price">S/ 160.00</span>
+                <span class="seats-left">5 Asientos disponibles</span>
+                <button class="btn-buy" onclick="alert('Esta es una vista previa. La funcionalidad de asientos está en desarrollo.')">Seleccionar Asiento</button>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+</body>
+</html>

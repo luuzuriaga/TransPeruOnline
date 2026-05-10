@@ -158,6 +158,7 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
     background: #1f2937;
     color: white;
     display: flex;
@@ -189,4 +190,461 @@ h2 {
 
 .navbar .menu li a:hover {
     color: #00bcd4;
+}
+
+/* =========================================
+   NUEVOS ESTILOS - LANDING & SECCIONES
+   ========================================= */
+
+/* ESTILOS DE NAVBAR ACTUALIZADOS */
+.navbar .active {
+    color: #00bcd4 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-login:hover {
+    background: white;
+    color: #1f2937;
+}
+
+.btn-register {
+    background: #00bcd4;
+    color: white;
+}
+
+.btn-register:hover {
+    background: #008ba3;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* BUSCADOR */
+.search-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-form .input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.search-form .input-group i {
+    color: #2a5298;
+    margin-right: 10px;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-search {
+    padding: 12px 25px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-search:hover {
+    background: #e67e22;
+}
+
+/* SECCIONES GENERALES */
+.features, .page-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features h2, .section-header h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #eee;
+    font-size: 18px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* RUTAS GRID */
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.route-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.route-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.route-info {
+    padding: 20px;
+}
+
+.route-info h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.route-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1e3c72;
+}
+
+/* TABLA DE HORARIOS */
+.table-container {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table th {
+    background: #1e3c72;
+    color: white;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr:hover {
+    background: #f9f9f9;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    background: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-small:hover {
+    background: #008ba3;
+}
+
+/* MINI SEARCH */
+.mini-search {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 30px auto;
+}
+
+.mini-form .input-group {
+    background: #f1f1f1;
+}
+
+/* RESULTADOS DE PASAJES */
+.ticket-results {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ticket-results h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.ticket-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-left: 5px solid #00bcd4;
+}
+
+.ticket-time {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.t-title {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.t-hour {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.t-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.duration {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.ticket-service {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.service-type {
+    display: inline-block;
+    background: #e1f5fe;
+    color: #0288d1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ticket-service ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 13px;
+}
+
+.ticket-price {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.seats-left {
+    font-size: 13px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.btn-buy {
+    padding: 10px 20px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background: #d35400;
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+    .features-grid {
+        flex-direction: column;
+    }
+    .ticket-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .ticket-price {
+        align-items: flex-start;
+        width: 100%;
+    }
+    .ticket-service {
+        padding: 0;
+    }
+    .navbar {
+        padding: 10px 15px;
+    }
+    .navbar .menu {
+        display: none;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+        text-align: center;
+    }
 }

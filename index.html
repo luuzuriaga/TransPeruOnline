@@ -2,77 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login TransPerú</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransPerú Online - Compra tus Pasajes de Bus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<div class="box box-home">
+<!-- NAVBAR FIJA -->
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-bus"></i> TransPerú</div>
+    <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="rutas.html">Rutas</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="pasajes.html">Pasajes</a></li>
+    </ul>
+    <div class="nav-buttons">
+        <a href="login.html" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a>
+        <a href="register.html" class="btn btn-register"><i class="fa-solid fa-user-plus"></i> Regístrate</a>
+    </div>
+</nav>
 
-    <h2><i class="fa-solid fa-bus"></i> TransPerú Online</h2>
-
-    <div class="line"></div>
-
-    <div id="msg"></div>
-
-    <form action="login_usu.php" method="POST">
-
-        <div class="input-box">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="usuario" placeholder="Usuario" required>
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Viaja por todo el Perú con comodidad y seguridad</h1>
+        <p>Encuentra los mejores destinos y compra tus pasajes de bus en línea fácilmente y sin hacer colas.</p>
+        
+        <div class="search-box">
+            <form action="pasajes.html" method="GET" class="search-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="origen" placeholder="Origen" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="destino" placeholder="Destino" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <input type="date" name="fecha" required>
+                </div>
+                <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass"></i> Buscar Pasajes</button>
+            </form>
         </div>
+    </div>
+</header>
 
-        <div class="input-box">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+<!-- CARACTERÍSTICAS -->
+<section class="features">
+    <h2>¿Por qué elegir TransPerú?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fa-solid fa-shield-halved fa-3x"></i>
+            <h3>Seguridad Garantizada</h3>
+            <p>Nuestra flota es monitoreada 24/7 por GPS para tu tranquilidad y la de tu familia.</p>
         </div>
-
-        <div class="check-box">
-            <input type="checkbox" onclick="togglePassword()"> Mostrar contraseña
+        <div class="feature-card">
+            <i class="fa-solid fa-couch fa-3x"></i>
+            <h3>Máxima Comodidad</h3>
+            <p>Disfruta de nuestros asientos reclinables de 160° y 180° para un viaje totalmente placentero.</p>
         </div>
-
-        <div class="buttons">
-
-            <button type="submit" class="login">
-                <i class="fa-solid fa-right-to-bracket"></i> Ingresar
-            </button>
-
-            <button type="button" class="register"
-                onclick="window.location.href='register.html'">
-                <i class="fa-solid fa-user-plus"></i> Registrarte
-            </button>
-
+        <div class="feature-card">
+            <i class="fa-solid fa-ticket fa-3x"></i>
+            <h3>Compra Fácil</h3>
+            <p>Adquiere tus pasajes en minutos, con múltiples métodos de pago y sin necesidad de imprimir.</p>
         </div>
-
-        <div class="line"></div>
-
-        <div class="social">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-
-    </form>
-</div>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-const error = params.get("error");
-
-if (error == "1") {
-    document.getElementById("msg").innerHTML = "ERROR: Contraseña o usuario incorrecta";
-    document.getElementById("msg").style.color = "red";
-}
-</script>
-
-<script>
-function togglePassword() {
-    let pass = document.getElementById("password");
-    pass.type = pass.type === "password" ? "text" : "password";
-}
-</script>
+    </div>
+</section>
 
 </body>
 </html>
